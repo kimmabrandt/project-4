@@ -39,6 +39,14 @@ class PostsController < ApplicationController
     redirect_to main_index_path, :notice => "Your post has been deleted"
   end
 
+  def vote
+    value = params[:type] == "up" ? 1 : -1
+    @post = Post.find(params[:id]) 
+    @post.add_or_update_evaluation(:votes, value, current_user)
+    redirect_to :back, notice: "Thank you for voting"
+  end
+
+
   private
 
   def post_params

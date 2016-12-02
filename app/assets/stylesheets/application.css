@@ -78,3 +78,11 @@ h2 {
 .card-show {
 	font-size:18px;
 }
+
+.addgoal {
+	font-size:20px;
+}
+
+.addgoal:hover {
+	background-color:grey;
+}
