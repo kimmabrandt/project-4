@@ -49,3 +49,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'httparty', '0.14.0'
 gem 'json'
 gem 'activerecord-reputation-system', require: 'reputation_system'
+
+gem 'rails_12factor', group: :production
