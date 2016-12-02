@@ -1,25 +1,6 @@
-# README
+# README - my.Life (project 4)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application for keeping track of goals of all types (personal, business, education, fun, etc)! Users can log in and see their personal goals, and can continue to add notes on each goal.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# project-4
+* Technologies used: Ruby on Rails, Materialize
+* Credits: http://materializecss.com (css framework), https://unsplash.com (photo)
