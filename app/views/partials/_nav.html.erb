@@ -1,0 +1,23 @@
+<header>
+	<div class="row">
+		<div class="logo col s8 blue-grey lighten-3">
+			<a href="/">
+			<h1><strong>
+				goals.
+			</strong></h1>
+			</a>
+		</div>
+		<div class="nav-buttons col s4">
+		  <% if @current_user %>
+		    <%= form_for :user, :url => logout_path, method: :delete do |form| %>
+		      <%= form.submit  'Logout', class: 'btn waves-effect waves-light two' %>
+		   	<% end %>
+		    <%= link_to '+ New Post', '/posts/new', class: 'btn waves-effect waves-light' %>
+		  <% else %>
+		  	<%= link_to 'Signup', '/signup', class: 'btn waves-effect waves-light' %>
+		    <%= link_to 'Login', '/login', class: 'btn waves-effect waves-light' %>
+		  <% end %>
+		</div>
+
+	</div>
+</header>

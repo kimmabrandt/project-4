@@ -1,0 +1,30 @@
+
+  <div class="container">
+    <div class="section">
+    	<div class="row">
+    		<div class="col s12 center">
+    		  <%= link_to '+ New Post', '/posts/new', class: 'btn waves-effect waves-light' %>
+    		</div>
+    	</div>
+      <div class="row">
+        <div class="col s12">
+					<div class="card-panel card-show lighten-5">
+						<h2><%= @post.title %></h2>
+						<p><%= @post.description %></p>			
+						<p><em>-<%= @post.user.name %></em></p>
+						<%= link_to "Edit Post", edit_post_path(@post) %>&nbsp;&nbsp; | &nbsp;&nbsp; 
+						<%= link_to "Delete", post_path(@post), method: :delete %>
+						<hr class="blue-grey lighten-4">
+						<%= link_to "Back", main_path %>
+
+
+					</div>	
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+

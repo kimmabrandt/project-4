@@ -1,0 +1,80 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+.btn.waves-effect.waves-light {
+	background-color: rgba(141,148,252, .9);
+}
+
+.btn.waves-effect.waves-light.two {
+	background-color: rgba(252,207,86, 1);
+	margin-top:-10px;
+font-size:18px;
+}
+
+.comment-form {
+	width: 400px;
+}
+
+.header-banner {
+	height:350px;
+	background-image: url('imageheader.jpg');
+}
+
+.nav-buttons {
+	padding:2px;
+}
+
+body {
+	font-family: 'Lato';
+}
+
+a {
+	color:#607d8b;
+	border-bottom: 2px solid #ffc107;
+}
+a:link, a:visited {
+	color:#455a64;
+}
+a:hover {
+	color:#ffc107;
+}
+
+posts a{
+	color:#607d8b;
+}
+
+hr {
+	margin-top:30px;
+	margin-bottom:16px;
+  border: 0;
+  height: 0;
+  border-top: 0px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+card-show {
+	padding:40px;
+}
+
+h2 {
+	font-weight: bolder;
+	font-size:60px;
+}
+
+.card-show {
+	font-size:18px;
+}

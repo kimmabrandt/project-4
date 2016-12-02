@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project4</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+
+  </head>
+
+<body>
+
+ <nav class="blue-grey darken-1" role="navigation">
+    <div class="container">
+     <% if @current_user %>
+      <a id="logo-container" href="/main" class="brand-logo">my.Life</a>
+     <% else %>
+      <a id="logo-container" href="/" class="brand-logo">my.Life</a>
+     <% end %>
+
+      <div class="nav-buttons right">
+		  <% if @current_user %>
+		    <%= form_for :user, :url => logout_path, method: :delete do |form| %>
+		      <%= form.submit  'Logout', class: 'btn waves-effect waves-light two' %>
+		   	<% end %>
+
+		  <% else %>
+		  	<%= link_to 'Signup', '/signup', class: 'btn waves-effect waves-light amber' %>
+		    <%= link_to 'Login', '/login', class: 'btn waves-effect waves-light amber' %>
+		  <% end %>
+		</div>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><%= render "partials/flash" %></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <%= yield %>
+
+
+  <footer class="page-footer blue-grey">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Contact Us</h5>
+          <p class="grey-text text-lighten-4"></p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Site Map</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Kim
+      </div>
+    </div>
+  </footer>
+
+
+
+
+		
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  </body>
+</html>
