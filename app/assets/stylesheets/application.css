@@ -17,10 +17,6 @@
 body {
 	background-image: url('tileable-wood.png');
 }
-
-#header {
-	height:40px;
-}
 a {
 	color:white;
 }
@@ -28,7 +24,6 @@ a {
 a:hover {
 	border-bottom: 2px solid white;
 }
-
 
 .btn.waves-effect.waves-light {
 	background-color: rgba(141,148,252, .9);
