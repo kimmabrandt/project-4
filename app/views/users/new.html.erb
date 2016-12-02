@@ -12,13 +12,17 @@
         <div class="col s12">
 					<div class="card-panel card-show lighten-5">
 						<%= form_for :user do |form| %>
+              <%= form.label :name %>
 							<%= form.text_field :name, placeholder: 'Enter Name' %>
+              <%= form.label :email %>
 							<%= form.email_field :email, placeholder: 'Enter Email' %>
+              <%= form.label :password %>
 							<%= form.password_field :password, placeholder: 'Enter Password' %>
-							<%= form.submit 'Signup' %>
+							<%= form.submit 'Signup', class: 'btn waves-effect waves-light amber lighten-1' %>
 						<% end %>
-						<hr class="blue-grey lighten-4">
+						<br><br>
 						<%= link_to "< Back", main_path %>
+
 
 
 					</div>	

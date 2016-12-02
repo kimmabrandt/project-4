@@ -1,17 +1,42 @@
-<h1>Edit Post</h1>
 
-<%= form_for @post do |t| %>
-	<div class="form-group">
-		<%= t.label :title %>
-		<%= t.text_area :title, class: 'form-control' %>
-	</div>
-	<div class="form-group">
-		<%= t.label :description %>
-		<%= t.text_area :description, class: 'form-control' %>
-	</div>
-	<div class="form-group">
-		<%= t.label :due %>
-		<%= t.text_area :due, class: 'form-control' %>
-	</div>
-	<%= t.submit 'Update Post', class: 'btn waves-effect waves-light' %>
-<% end %>
+  <div class="container">
+    <div class="section">
+    	<div class="row">
+    		<div class="col s12 center">
+    		  <h3>Edit Goal</h3>
+    		</div>
+    	</div>
+      <div class="row">
+        <div class="col s12">
+					<div class="card-panel card-show lighten-5">
+						<%= form_for @post do |t| %>
+							<div class="form-group">
+								<%= t.label :title %>
+								<%= t.text_area :title, class: 'form-control' %>
+							</div>
+							<div class="form-group">
+								<%= t.label :description %>
+								<%= t.text_area :description, class: 'form-control' %>
+							</div>
+							<div class="form-group">
+								<%= t.label :due %>
+								<%= t.text_area :due, class: 'form-control' %>
+							</div>
+							<%= t.submit 'Update Post', class: 'btn waves-effect waves-light amber white-text' %>
+						<% end %>
+						<br><br>
+						<%= link_to "< Back", main_path %>
+
+
+					</div>	
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+

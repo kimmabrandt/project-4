@@ -1,0 +1,9 @@
+<div class="comment-form">
+	<%= form_for([@post,@post.comments.build]) do |f| %>
+		<p class="form-group">
+			<%= f.label :body %><br>
+			<%= f.text_area :body %>
+		</p>
+			<%= f.submit 'ADD NOTE', class: 'btn-small waves-effect waves-light amber white-text' %>
+		<% end %>
+	</div>

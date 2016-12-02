@@ -3,7 +3,7 @@
     <div class="section">
     	<div class="row">
     		<div class="col s12 center">
-    		  <%= link_to '+ New Post', '/posts/new', class: 'btn waves-effect waves-light' %>
+    		  <%= link_to '+ New Post', '/posts/new', class: 'btn-large waves-effect waves-light amber white-text' %>
     		</div>
     	</div>
       <div class="row">
@@ -14,8 +14,16 @@
 						<p><em>-<%= @post.user.name %></em></p>
 						<%= link_to "Edit Post", edit_post_path(@post) %>&nbsp;&nbsp; | &nbsp;&nbsp; 
 						<%= link_to "Delete", post_path(@post), method: :delete %>
-						<hr class="blue-grey lighten-4">
-						<%= link_to "Back", main_path %>
+						<hr class="blue-grey lighten-4" style="margin-bottom:30px">
+
+            <h6><%= @post.comments.count %> Notes</h6>
+            <%= render @post.comments %>
+            <h6 style="margin-top:30px">Add a note:</h6>
+            <%= render "comments/form" %>
+            <br>
+
+            <hr class="blue-grey lighten-4">
+						<%= link_to "<  Back", main_path %>
 
 
 					</div>	

@@ -2,6 +2,7 @@
 nav ul a,
 nav .brand-logo {
   color: #607d8b;
+  border:none;
 }
 
 p {

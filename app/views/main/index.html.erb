@@ -30,24 +30,22 @@
 									<h6 style="font-size:18px">Priority: <b>1</b></h6>
 									</div>
 									<div class="col s3">
-									<h6 style="font-size:18px; font-weight:bolder">Deadline: <%= post.due %></h6>
+									<h6 class="red-text text-darken-1" style="font-size:18px; font-weight:bolder">Deadline: <%= post.due %></h6>
 									</div>
 								</div>
 									<p><%= post.description %></p>
+
 									<em>-<%= post.user.name %></em><br>
 									<%= post.created_at.time.to_formatted_s(:long) %> 
-								
 								</div>
 							<% end %>
 							<% else %>
 							No Posts yet! <br>
 							<%= link_to '+ New Post', '/posts/new', class: 'btn waves-effect waves-light' %>
 						<% end %>
-
 					</p>
         </div>
       </div>
-
     </div>
   </div>
 
